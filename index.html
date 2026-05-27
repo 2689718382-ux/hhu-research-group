@@ -3,357 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>河海大学土木与交通学院课题组</title>
-  <meta name="description" content="河海大学土木与交通学院课题组网站，展示机器学习、可靠度分析、岩石裂隙产状等方向的研究成果。" />
-  <style>
-    :root {
-      --primary: #0b5f8a;
-      --primary-dark: #073d5b;
-      --accent: #2aa7a2;
-      --bg: #f6f8fb;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --card: #ffffff;
-      --border: #e5e7eb;
-      --shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.7;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255, 255, 255, 0.94);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(14px);
-    }
-
-    .nav {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 14px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 260px;
-    }
-
-    .logo {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      color: white;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      box-shadow: 0 8px 20px rgba(11, 95, 138, 0.28);
-    }
-
-    .brand-title { font-weight: 800; line-height: 1.25; }
-    .brand-subtitle { font-size: 12px; color: var(--muted); }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      color: #374151;
-      font-size: 14px;
-    }
-
-    .nav-links a:hover { color: var(--primary); }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background: radial-gradient(circle at 12% 18%, rgba(42, 167, 162, 0.25), transparent 28%),
-        linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: white;
-    }
-
-    .hero-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 86px 22px 92px;
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: clamp(34px, 5vw, 60px);
-      line-height: 1.12;
-      margin: 0 0 22px;
-      letter-spacing: -1px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: rgba(255, 255, 255, 0.86);
-      max-width: 760px;
-      margin: 0 0 32px;
-    }
-
-    .actions { display: flex; gap: 14px; flex-wrap: wrap; }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-weight: 700;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      background: white;
-      color: var(--primary-dark);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
-    }
-
-    .btn-secondary {
-      color: white;
-      border: 1px solid rgba(255, 255, 255, 0.34);
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .hero-card {
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 28px;
-      padding: 28px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-    }
-
-    .hero-card h2 { margin: 0 0 18px; font-size: 22px; }
-
-    .metric-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    .metric {
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.13);
-    }
-
-    .metric strong {
-      display: block;
-      font-size: 26px;
-      line-height: 1.2;
-    }
-
-    .metric span {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.78);
-    }
-
-    section {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 74px 22px;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 24px;
-      margin-bottom: 32px;
-    }
-
-    .section-head h2 {
-      margin: 0;
-      font-size: 32px;
-      line-height: 1.2;
-      color: #111827;
-    }
-
-    .section-head p {
-      max-width: 620px;
-      margin: 8px 0 0;
-      color: var(--muted);
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-    }
-
-    .card h3 { margin: 0 0 12px; color: #111827; }
-    .card p { margin: 0; color: var(--muted); }
-
-    .tag-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 18px;
-    }
-
-    .tag {
-      display: inline-flex;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: #e8f4f7;
-      color: var(--primary-dark);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .timeline { display: grid; gap: 16px; }
-
-    .paper {
-      background: white;
-      border: 1px solid var(--border);
-      border-left: 5px solid var(--accent);
-      border-radius: 18px;
-      padding: 20px;
-    }
-
-    .paper .year {
-      color: var(--primary);
-      font-weight: 800;
-      font-size: 13px;
-    }
-
-    .paper h3 {
-      margin: 4px 0 6px;
-      font-size: 18px;
-    }
-
-    .paper p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .people-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .person {
-      text-align: center;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 22px 16px;
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
-    }
-
-    .avatar {
-      width: 76px;
-      height: 76px;
-      margin: 0 auto 14px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: white;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-    }
-
-    .person h3 { margin: 0 0 4px; font-size: 17px; }
-    .person p { margin: 0; color: var(--muted); font-size: 13px; }
-
-    .contact-box {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-    }
-
-    .footer {
-      background: #081f31;
-      color: rgba(255, 255, 255, 0.78);
-      padding: 34px 22px;
-      text-align: center;
-    }
-
-    .footer strong { color: white; }
-
-    @media (max-width: 900px) {
-      .nav { align-items: flex-start; }
-      .nav-links { display: none; }
-      .hero-inner, .split, .contact-box { grid-template-columns: 1fr; }
-      .grid-3, .people-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 640px) {
-      .hero-inner { padding: 64px 20px; }
-      .grid-3, .people-grid, .metric-grid { grid-template-columns: 1fr; }
-      .section-head { display: block; }
-    }
-  </style>
+  <title>智能岩土可靠度与裂隙结构分析课题组</title>
+  <meta name="description" content="河海大学土木与交通学院智能岩土可靠度与裂隙结构分析课题组网站，展示机器学习、可靠度分析、岩石裂隙产状等研究方向与科研成果。" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header class="topbar">
+  <div class="top-strip">
+    <div class="top-strip-inner">
+      <div>河海大学 · 土木与交通学院</div>
+      <div>Machine Learning · Reliability Analysis · Rock Fracture Orientation</div>
+    </div>
+  </div>
+
+  <header class="header">
     <nav class="nav">
       <a class="brand" href="#home" aria-label="返回首页">
-        <div class="logo">HHU</div>
+        <div class="brand-mark">HHU</div>
         <div>
-          <div class="brand-title">河海大学土木与交通学院课题组</div>
-          <div class="brand-subtitle">Civil & Transportation Engineering Research Group</div>
+          <div class="brand-title">智能岩土可靠度与裂隙结构分析课题组</div>
+          <div class="brand-subtitle">Intelligent Geotechnical Reliability & Fracture Characterization Group</div>
         </div>
       </a>
-      <div class="nav-links">
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="打开导航菜单">菜单</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">首页</a>
+        <a href="#about">团队介绍</a>
         <a href="#research">研究方向</a>
-        <a href="#publications">科研成果</a>
         <a href="#people">团队成员</a>
-        <a href="#projects">项目平台</a>
+        <a href="#science">科研成果</a>
+        <a href="#platform">科研平台</a>
+        <a href="#join">招生招聘</a>
         <a href="#contact">联系我们</a>
       </div>
     </nav>
@@ -363,169 +42,174 @@
     <section class="hero">
       <div class="hero-inner">
         <div>
-          <div class="eyebrow">河海大学 · 土木与交通学院</div>
-          <h1>面向岩土工程可靠性的智能分析与裂隙结构表征</h1>
-          <p>
-            本课题组围绕机器学习、可靠度分析与岩石裂隙产状识别等方向开展研究，致力于发展数据驱动与机理模型融合的土木工程安全评估方法。
-          </p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#publications">查看科研成果</a>
-            <a class="btn btn-secondary" href="#contact">合作与交流</a>
+          <div class="kicker"><span></span> Hohai University · Civil and Transportation Engineering</div>
+          <h1>面向复杂岩土工程的智能可靠度分析与裂隙结构表征</h1>
+          <p class="hero-lead">课题组聚焦机器学习、可靠度分析和岩石裂隙产状识别，发展数据驱动与工程机理相结合的岩土工程安全评估方法，服务地下工程、水利工程与交通基础设施安全。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#research">了解研究方向</a>
+            <a class="btn btn-ghost" href="#science">查看科研成果</a>
           </div>
         </div>
-        <aside class="hero-card" aria-label="课题组概览">
-          <h2>Research Focus</h2>
-          <div class="metric-grid">
-            <div class="metric"><strong>ML</strong><span>机器学习建模</span></div>
-            <div class="metric"><strong>RA</strong><span>可靠度分析</span></div>
-            <div class="metric"><strong>Rock</strong><span>岩石裂隙产状</span></div>
-            <div class="metric"><strong>Safety</strong><span>工程安全评估</span></div>
+        <aside class="hero-panel" aria-label="研究关键词">
+          <div class="hero-panel-top">
+            <h2>研究关键词</h2>
+            <div class="badge">Research Focus</div>
+          </div>
+          <div class="focus-grid">
+            <div class="focus-item"><strong>ML</strong><span>机器学习与工程数据建模</span></div>
+            <div class="focus-item"><strong>FORM</strong><span>可靠指标、失效概率与风险评估</span></div>
+            <div class="focus-item"><strong>Rock</strong><span>裂隙产状识别与统计表征</span></div>
+            <div class="focus-item"><strong>Safety</strong><span>岩土与结构系统安全评价</span></div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="research">
-      <div class="section-head">
+    <section class="section" id="about">
+      <div class="section-title">
+        <div>
+          <h2>团队介绍</h2>
+          <p>围绕土木与交通基础设施中的复杂岩土工程问题，课题组开展智能感知、可靠度分析、裂隙结构表征及工程安全评估研究。</p>
+        </div>
+        <a class="more-link" href="#contact">合作交流 →</a>
+      </div>
+      <div class="intro-grid">
+        <div class="card">
+          <h3>我们的目标</h3>
+          <p>构建面向岩土工程不确定性、非均质性和多源数据的智能分析框架，为边坡、隧道、地下空间、水利工程和交通工程的安全设计与风险预警提供理论与工具支撑。</p>
+          <div class="stat-grid">
+            <div class="stat"><strong>3</strong><span>核心方向</span></div>
+            <div class="stat"><strong>4+</strong><span>应用场景</span></div>
+            <div class="stat"><strong>AI</strong><span>方法融合</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>研究特色</h3>
+          <p>以机器学习为工具，以可靠度理论为基础，以岩石裂隙产状和工程地质信息为对象，推动数据、模型与工程判断的融合。网站中的成员、项目、论文和平台信息均预留为可编辑模块，便于后续持续维护。</p>
+          <div class="tag-row">
+            <span class="tag">数据驱动</span><span class="tag">可靠度理论</span><span class="tag">岩体结构</span><span class="tag">工程安全</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="section-title">
         <div>
           <h2>研究方向</h2>
-          <p>聚焦土木与岩土工程中的不确定性建模、智能识别和可靠性评估问题。</p>
+          <p>建议把首页研究方向控制在 3–4 个，详情页或后续页面再展开算法、案例和代表论文。</p>
         </div>
       </div>
-      <div class="grid-3">
-        <article class="card">
-          <h3>机器学习</h3>
-          <p>构建面向工程数据的预测、分类、反演与特征提取模型，探索机器学习与物理机理的融合方法。</p>
-          <div class="tag-row"><span class="tag">数据驱动</span><span class="tag">智能预测</span><span class="tag">模型融合</span></div>
+      <div class="research-grid">
+        <article class="card research-card" data-index="01">
+          <div class="icon">AI</div>
+          <h3>机器学习与岩土工程数据建模</h3>
+          <p>研究面向岩土参数预测、损伤识别、灾害判别和工程响应反演的机器学习方法，探索物理约束、迁移学习和可解释模型。</p>
+          <div class="tag-row"><span class="tag">深度学习</span><span class="tag">特征提取</span><span class="tag">可解释性</span></div>
         </article>
-        <article class="card">
-          <h3>可靠度分析</h3>
-          <p>研究结构与岩土系统在参数不确定性、环境扰动和模型误差下的安全概率与失效风险。</p>
-          <div class="tag-row"><span class="tag">不确定性</span><span class="tag">失效概率</span><span class="tag">风险评估</span></div>
+        <article class="card research-card" data-index="02">
+          <div class="icon">β</div>
+          <h3>岩土结构可靠度分析</h3>
+          <p>面向参数随机性、模型不确定性和空间变异性，开展失效概率、可靠指标、敏感性分析和风险决策研究。</p>
+          <div class="tag-row"><span class="tag">失效概率</span><span class="tag">可靠指标</span><span class="tag">风险决策</span></div>
         </article>
-        <article class="card">
-          <h3>岩石裂隙产状</h3>
-          <p>围绕裂隙方向、倾角、间距、连通性等几何特征开展识别、统计表征与工程应用研究。</p>
-          <div class="tag-row"><span class="tag">裂隙识别</span><span class="tag">结构面</span><span class="tag">岩体工程</span></div>
+        <article class="card research-card" data-index="03">
+          <div class="icon">3D</div>
+          <h3>岩石裂隙产状识别与表征</h3>
+          <p>围绕裂隙倾向、倾角、间距、迹长和连通性等几何信息，开展图像识别、点云分析、统计建模和工程应用。</p>
+          <div class="tag-row"><span class="tag">裂隙识别</span><span class="tag">结构面</span><span class="tag">点云/图像</span></div>
         </article>
       </div>
     </section>
 
-    <section id="publications">
-      <div class="section-head">
-        <div>
-          <h2>科研成果</h2>
-          <p>这里可以按年份整理论文、专利、软件、数据集和项目成果。下面内容是示例，请替换为真实成果。</p>
-        </div>
-      </div>
-      <div class="split">
-        <div class="card">
-          <h3>成果维护建议</h3>
-          <p>建议优先放置近五年代表性论文，并为每项成果补充 DOI、PDF、代码或数据链接。成果较多时可按年份或类型筛选。</p>
-          <div class="tag-row"><span class="tag">Publications</span><span class="tag">Patents</span><span class="tag">Software</span><span class="tag">Datasets</span></div>
-        </div>
-        <div class="timeline">
-          <article class="paper">
-            <div class="year">2026 · Journal Article</div>
-            <h3>请替换为论文题目：Machine learning-based reliability assessment of rock engineering systems</h3>
-            <p>作者 A, 作者 B, 作者 C. 期刊名称, 2026. DOI: 待补充</p>
-          </article>
-          <article class="paper">
-            <div class="year">2025 · Conference / Journal</div>
-            <h3>请替换为论文题目：Fracture orientation characterization in rock masses using data-driven methods</h3>
-            <p>作者 A, 作者 B. 会议或期刊名称, 2025. PDF / Code: 待补充</p>
-          </article>
-          <article class="paper">
-            <div class="year">2024 · Project</div>
-            <h3>请替换为项目名称：岩体裂隙结构智能识别与可靠性评价方法研究</h3>
-            <p>项目来源、负责人、周期和主要研究内容待补充。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="people">
-      <div class="section-head">
+    <section class="section" id="people">
+      <div class="section-title">
         <div>
           <h2>团队成员</h2>
-          <p>第一版可以先放负责人、教师、博士生、硕士生和毕业生。照片可后续替换。</p>
+          <p>可替换为负责人、教师、博士生、硕士生、本科生和毕业生信息；后续可加入头像照片。</p>
         </div>
       </div>
       <div class="people-grid">
-        <article class="person">
-          <div class="avatar">PI</div>
-          <h3>课题组负责人</h3>
-          <p>教授 / 副教授 / 博导，研究方向待补充</p>
-        </article>
-        <article class="person">
-          <div class="avatar">D</div>
-          <h3>博士研究生</h3>
-          <p>机器学习与可靠度分析</p>
-        </article>
-        <article class="person">
-          <div class="avatar">M</div>
-          <h3>硕士研究生</h3>
-          <p>岩石裂隙产状识别</p>
-        </article>
-        <article class="person">
-          <div class="avatar">A</div>
-          <h3>毕业生 / Alumni</h3>
-          <p>历届成员去向待补充</p>
-        </article>
+        <article class="card person"><div class="avatar">PI</div><h3>课题组负责人</h3><small>Professor / Associate Professor</small><p>机器学习、可靠度分析、岩土工程安全评价</p></article>
+        <article class="card person"><div class="avatar">D</div><h3>博士研究生</h3><small>Ph.D. Students</small><p>可靠度理论、智能优化、裂隙岩体建模</p></article>
+        <article class="card person"><div class="avatar">M</div><h3>硕士研究生</h3><small>Master Students</small><p>裂隙产状识别、工程数据分析与算法实现</p></article>
+        <article class="card person"><div class="avatar">A</div><h3>毕业生</h3><small>Alumni</small><p>毕业去向、论文题目和获奖情况可在此维护</p></article>
       </div>
     </section>
 
-    <section id="projects">
-      <div class="section-head">
+    <section class="section" id="science">
+      <div class="section-title">
         <div>
-          <h2>项目与平台</h2>
-          <p>展示国家、省部级、企业合作项目，以及实验平台、计算平台和开源工具。</p>
+          <h2>科学研究</h2>
+          <p>将团队动态和科研成果并列展示，便于访问者快速了解近期活动和代表成果。</p>
         </div>
       </div>
-      <div class="grid-3">
-        <article class="card">
-          <h3>科研项目</h3>
-          <p>列出项目名称、项目来源、起止时间、负责人和关键词。</p>
-        </article>
-        <article class="card">
-          <h3>实验与数据平台</h3>
-          <p>展示岩体结构面采集、三维重建、数值模拟或数据管理平台。</p>
-        </article>
-        <article class="card">
-          <h3>软件与代码</h3>
-          <p>放置 GitHub、Gitee 或课题组自研工具链接，便于论文复现和学术交流。</p>
-        </article>
+      <div class="two-col">
+        <div>
+          <h3>团队动态</h3>
+          <div class="news-list">
+            <article class="news-item"><div class="date-box"><span>27</span>May</div><div><h3>课题组网站新版上线</h3><p>网站用于展示研究方向、团队成员、论文成果、科研平台和招生信息。</p></div></article>
+            <article class="news-item"><div class="date-box"><span>01</span>Sep</div><div><h3>欢迎新同学加入课题组</h3><p>请替换为真实团队新闻，例如新生入组、论文发表、项目获批或学术交流。</p></div></article>
+            <article class="news-item"><div class="date-box"><span>15</span>Jun</div><div><h3>学术报告与工程调研</h3><p>可发布会议报告、工程现场调研、合作交流等新闻。</p></div></article>
+          </div>
+        </div>
+        <div>
+          <h3>代表成果</h3>
+          <div class="pub-list">
+            <article class="pub-item"><div class="pub-year">2026</div><div><h3>请替换为论文题目：Machine learning-based reliability assessment of geotechnical systems</h3><p>作者、期刊、DOI、PDF 和代码链接待补充。</p></div></article>
+            <article class="pub-item"><div class="pub-year">2025</div><div><h3>请替换为论文题目：Automatic characterization of rock fracture orientation from field data</h3><p>作者、期刊、DOI、PDF 和数据集链接待补充。</p></div></article>
+            <article class="pub-item"><div class="pub-year">2024</div><div><h3>请替换为项目名称：岩土工程可靠度与裂隙结构智能分析方法研究</h3><p>项目来源、负责人、起止时间和主要成果待补充。</p></div></article>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="section-head">
+    <section class="section" id="platform">
+      <div class="section-title">
+        <div>
+          <h2>科研平台</h2>
+          <p>可展示实验设备、计算平台、数据平台、现场监测系统和软件代码仓库。</p>
+        </div>
+      </div>
+      <div class="platform-grid">
+        <article class="card platform-card"><div class="icon">Lab</div><h3>岩体结构采集与分析平台</h3><p>用于裂隙产状采集、图像/点云处理和结构面统计分析。</p></article>
+        <article class="card platform-card"><div class="icon">CPU</div><h3>可靠度计算与智能分析平台</h3><p>用于蒙特卡洛模拟、代理模型、可靠指标计算和敏感性分析。</p></article>
+        <article class="card platform-card"><div class="icon">Code</div><h3>软件与开源工具</h3><p>可放置 GitHub、Gitee、数据集、论文复现代码和工具包链接。</p></article>
+      </div>
+    </section>
+
+    <section class="recruit" id="join">
+      <div class="recruit-inner">
+        <div>
+          <h2>招生招聘</h2>
+          <p>欢迎对机器学习、可靠度分析、岩体结构识别、岩土工程安全评价感兴趣的本科生、硕士生和博士生联系交流。</p>
+        </div>
+        <a class="btn btn-primary" href="#contact">联系课题组</a>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-title">
         <div>
           <h2>联系我们</h2>
-          <p>欢迎对机器学习、可靠度分析、岩石裂隙产状及相关工程问题感兴趣的同学和同行交流合作。</p>
+          <p>请将下方地址、邮箱和友情链接替换为课题组真实信息。</p>
         </div>
       </div>
-      <div class="contact-box">
-        <div class="card">
-          <h3>地址</h3>
-          <p>江苏省南京市 · 河海大学 · 土木与交通学院</p>
-        </div>
-        <div class="card">
-          <h3>邮箱</h3>
-          <p>请替换为课题组负责人或公共联系邮箱：example@hhu.edu.cn</p>
-        </div>
+      <div class="contact-grid">
+        <article class="card"><h3>地址</h3><p>江苏省南京市 · 河海大学 · 土木与交通学院</p></article>
+        <article class="card"><h3>邮箱</h3><p>example@hhu.edu.cn</p></article>
+        <article class="card"><h3>友情链接</h3><p>河海大学、土木与交通学院、相关实验室主页</p></article>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <strong>河海大学土木与交通学院课题组</strong><br />
-    Machine Learning · Reliability Analysis · Rock Fracture Orientation<br />
-    © <span id="year"></span> Research Group. All rights reserved.
+    <div class="footer-inner">
+      <div><strong>智能岩土可靠度与裂隙结构分析课题组</strong><br />河海大学土木与交通学院</div>
+      <div>© <span id="year"></span> Research Group. All rights reserved.</div>
+    </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
