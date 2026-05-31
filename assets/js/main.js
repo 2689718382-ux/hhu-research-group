@@ -42,7 +42,7 @@ function updateHeaderState() {
 
 function updateActiveNav() {
   const current = sections
-    .filter((section) => section.getBoundingClientRect().top <= 130)
+    .filter((section) => section.getBoundingClientRect().top <= 150)
     .pop();
 
   if (!current) return;
@@ -65,6 +65,19 @@ if (backToTop) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+document.querySelectorAll('[data-scroll-target]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const selector = button.getAttribute('data-scroll-target');
+    const direction = Number(button.getAttribute('data-scroll-dir') || 1);
+    const track = document.querySelector(selector);
+    if (!track) return;
+
+    const card = track.querySelector('article');
+    const step = card ? card.getBoundingClientRect().width + 20 : track.clientWidth * 0.8;
+    track.scrollBy({ left: direction * step, behavior: 'smooth' });
+  });
+});
 
 const revealItems = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {

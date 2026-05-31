@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img" aria-label="边坡工程与滑坡预测预警图片占位">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eff8ff"/><stop offset="1" stop-color="#f9fcff"/></linearGradient></defs>
+  <rect width="1000" height="620" fill="url(#g)"/>
+  <path d="M80 475h840L660 210 500 350 390 265 210 475z" fill="#dcebf7" stroke="#b8ccdd" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M200 475c130-48 205-95 265-154 74-73 130-94 195-111" fill="none" stroke="#005bac" stroke-width="14" stroke-linecap="round"/>
+  <path d="M620 140l40 75 78 12-57 55 13 78-74-37-73 37 14-78-58-55 79-12z" fill="#d9a441" opacity="0.95"/>
+  <path d="M610 210v92" stroke="#083763" stroke-width="16" stroke-linecap="round"/><circle cx="610" cy="340" r="12" fill="#083763"/>
+  <text x="500" y="545" text-anchor="middle" fill="#36506e" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="42" font-weight="800">边坡工程 · 预测预警</text>
+</svg>
