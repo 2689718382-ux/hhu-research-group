@@ -1,33 +1,26 @@
 # 岩土工程风险与韧性课题组网站
 
-这是一个适合 GitHub Pages 部署的静态课题组网站。页面已按你的最新要求重新组织为：
+这是一个适合 GitHub Pages 部署的静态课题组网站，包含课题组首页和姬建教授个人页面。
 
-1. 首页：使用上传的楼宇照片作为首页背景图。
-2. 科研团队：横向手动滚动成员栏，展示姓名、照片和研究方向。
-3. 研究方向：横向手动滚动研究方向栏，每个方向预留图片。
-4. 团队动态与代表成果：预留新闻、论文、项目和获奖信息。
-5. 联系我们：已设置联系邮箱 `ji0003an@e.ntu.edu.sg`。
-
-已删除“科研平台”部分，并去掉首页中的半透明关键词圆角方框。首页大标题已将“课题组”单独置于第二行，页脚深蓝色区域左侧标识已改为学院院徽。
-
-## 文件结构
+## 页面结构
 
 ```text
-geotech_risk_resilience_site/
-  index.html
+research-group-site/
+  index.html          # 课题组首页
+  ji-jian.html        # 姬建教授个人页面
   README.md
   assets/
-    css/
-      style.css
-    js/
-      main.js
+    css/style.css
+    js/main.js
     img/
       home-bg.png
+      jijian-forum-2026.jpg
       college-logo-blue.png
-      college-logo-compact.png
       college-emblem.png
-      college-emblem-original.png
       people/
+        Jianji.jpg
+        MapelChow.png
+        PengYijie.jpg
         person-placeholder.svg
       research/
         risk-reliability.svg
@@ -36,7 +29,19 @@ geotech_risk_resilience_site/
         resilience-prevention.svg
 ```
 
-## 如何替换成员照片
+## 已完成内容
+
+1. 首页保留课题组简介、科研团队、研究方向、动态成果和联系方式。
+2. 科研团队中的“姬建”卡片已改为可点击链接，点击后跳转到 `ji-jian.html`。
+3. 姬建个人页面已整理个人简介、研究方向、成果概览、学术任职、代表成果与奖励、会议报告信息。
+4. 上传的会议图片已保存为 `assets/img/jijian-forum-2026.jpg`，并展示在姬建个人页面的会议报告板块。
+5. 页面信息优先依据上传图片整理，并参考河海大学教师主页：`https://jszy.hhu.edu.cn/jj100/`。
+
+## 如何预览
+
+直接用浏览器打开 `index.html` 即可。由于这是纯静态网站，不需要启动服务器。
+
+## 如何修改成员信息
 
 在 `index.html` 中搜索成员姓名，例如：
 
@@ -44,71 +49,28 @@ geotech_risk_resilience_site/
 <h3>姬建</h3>
 ```
 
-把对应卡片中的照片路径：
-
-```html
-<img src="assets/img/people/person-placeholder.svg" alt="姬建照片占位" />
-```
-
-替换为真实照片路径，例如：
-
-```html
-<img src="assets/img/people/jijian.jpg" alt="姬建照片" />
-```
-
-然后把照片文件放到：
+修改对应卡片中的姓名、照片路径和研究方向即可。成员照片建议放在：
 
 ```text
 assets/img/people/
 ```
 
-建议照片使用竖版比例，例如 4:5 或 3:4。
+## 如何修改姬建个人页面
 
-## 如何修改成员研究方向
+打开 `ji-jian.html`，按页面板块修改以下内容：
 
-在每个成员卡片里修改这段文字即可：
-
-```html
-<p>岩土工程风险分析与可靠性控制（可替换为具体方向）</p>
-```
-
-## 如何替换研究方向图片
-
-研究方向图片位于：
-
-```text
-assets/img/research/
-```
-
-可以直接替换以下文件，保持文件名不变：
-
-```text
-risk-reliability.svg
-slope-warning.svg
-underground-space.svg
-resilience-prevention.svg
-```
-
-也可以在 `index.html` 中修改图片路径，使用 `.jpg`、`.png`、`.webp` 等格式。
-
-## 如何修改首页背景图
-
-首页背景图路径为：
-
-```text
-assets/img/home-bg.png
-```
-
-替换该文件并保持文件名不变即可。
+- 个人简介：搜索 `profile-summary`
+- 研究方向：搜索 `info-grid`
+- 学术任职与成果奖励：搜索 `clean-list`
+- 会议报告：搜索 `talk-details`
 
 ## 如何部署到 GitHub Pages
 
-1. 解压压缩包。
-2. 将 `index.html`、`README.md`、`assets` 文件夹上传到 GitHub 仓库根目录。
-3. 进入仓库 `Settings -> Pages`。
-4. Source 选择 `Deploy from a branch`。
-5. Branch 选择 `main`，Folder 选择 `/root` 或 `/`。
-6. 保存后等待 GitHub Pages 自动部署。
+1. 将 `index.html`、`ji-jian.html`、`README.md` 和 `assets` 文件夹上传到仓库根目录。
+2. 进入仓库 `Settings -> Pages`。
+3. Source 选择 `Deploy from a branch`。
+4. Branch 选择 `main`，Folder 选择 `/root` 或 `/`。
+5. 保存后等待 GitHub Pages 自动部署。
 
 访问地址通常为：
 
