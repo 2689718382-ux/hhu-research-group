@@ -214,8 +214,8 @@ code {
 .hero h1 {
   margin: 0 0 22px;
   font-size: clamp(42px, 6.6vw, 82px);
-  line-height: 1.04;
-  letter-spacing: -0.07em;
+  line-height: 1.08;
+  letter-spacing: 0.02em;
   text-shadow: 0 12px 34px rgba(0, 0, 0, 0.34);
 }
 .hero-lead {
@@ -686,7 +686,7 @@ code {
   .brand-copy strong { max-width: 240px; font-size: 15px; }
   .hero { min-height: 610px; }
   .hero-content { padding: 70px 0 86px; }
-  .hero h1 { font-size: 42px; letter-spacing: -0.05em; }
+  .hero h1 { font-size: 42px; letter-spacing: 0.01em; }
   .hero-actions { width: 100%; }
   .btn { width: 100%; }
   .affiliation-band { margin-top: -24px; }
