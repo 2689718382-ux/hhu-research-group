@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="900" viewBox="0 0 720 900" role="img" aria-label="成员照片占位图">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eaf4ff"/>
+      <stop offset="1" stop-color="#f7fbff"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#005bac" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#15a1b8" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="900" fill="url(#bg)"/>
+  <path d="M0 680 C150 610 270 720 420 640 S650 540 720 610" fill="none" stroke="url(#line)" stroke-width="24"/>
+  <path d="M0 748 C160 690 320 790 480 708 S650 648 720 690" fill="none" stroke="url(#line)" stroke-width="14"/>
+  <circle cx="360" cy="308" r="104" fill="#ffffff" stroke="#d6e6f6" stroke-width="8"/>
+  <path d="M188 650c28-116 96-178 172-178s144 62 172 178" fill="#ffffff" stroke="#d6e6f6" stroke-width="8"/>
+  <text x="360" y="790" text-anchor="middle" fill="#6b7a90" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="38" font-weight="700">替换成员照片</text>
+</svg>
