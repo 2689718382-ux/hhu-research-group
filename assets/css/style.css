@@ -189,7 +189,7 @@ button { font: inherit; }
   align-items: center;
   overflow: hidden;
   color: white;
-  background-image: url("../img/home-bg.png");
+  background-image: url("../img/home-bg.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -781,7 +781,7 @@ button { font: inherit; }
   color: white;
   background:
     linear-gradient(120deg, rgba(5, 31, 54, 0.96), rgba(0, 91, 172, 0.88) 62%, rgba(19, 143, 139, 0.82)),
-    url("../img/home-bg.png");
+    url("../img/home-bg.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -1072,7 +1072,7 @@ button { font: inherit; }
   align-items: center;
   overflow: hidden;
   color: white;
-  background-image: url("../img/home-bg.png");
+  background-image: url("../img/home-bg.jpg");
   background-size: cover;
   background-position: center;
 }
